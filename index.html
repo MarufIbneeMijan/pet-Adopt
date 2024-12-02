@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- daisy ui CDN  -->  
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- daisy ui CDN  -->
+ <!-- google font CDN  -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+ <!-- google font CDN  -->
+  <style>
+    body{
+        font-family: Lato;
+    }
+  </style>
+    <title>Document</title>
+</head>
+<body class="" >
+ 
+    <!-- header section start here  -->
+    <header class="w-3/4 mx-auto  ">
+        <nav class="flex justify-between">
+           <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h8m-8 6h16" />
+                      </svg>
+                    </div>
+                    <ul
+                      tabindex="0"
+                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                      <li><a>Home</a></li>
+                     
+                      <li><a>Shop</a></li>
+                      <li><a>Contact</a></li>
+                    </ul>
+                  </div>
+                 
+                    <div class="flex gap-2">
+                        <img src="images/logo.webp" alt="" srcset="">
+                        <h1 class="font-extrabold">Peddy</h1>
+                        
+                    </div>
+                  
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1">
+                    <li><a>Home</a></li>
+                     
+                      <li><a>Shop</a></li>
+                      <li><a>Contact</a></li>
+                  </ul>
+                </div>
+                <div class=" navbar-end ">
+                 <img class="w-7 h-7 border rounded-full p-1 " src="https://img.icons8.com/?size=100&id=82751&format=png&color=000000" alt="" srcset="">
+                </div>
+              </div>
+        </nav>
+        <!-- banner section stary here  -->
+        <section class="flex flex-col align-middle text-center mt-8">
+            <div>
+                <span class="text-[24px] text-gray-400 font-bold">Bringing Families Together ❤️‍🔥 </span>
+                <h1 class="text-[72px] text-[#131313] font-bold">Your Path to Adoption <br> Starts Here</h1>
+                <p class="font-bold text-[24px] text-[#131313] ">It is a long established fact that a  <br>reader will be distracted by the readable content of a page when looking at its layout. .</p>
+                <a href="#showAllPets" class="btn border-none text-[#fff] mt-5 bg-[#0E7A81]" >Show More</a>
+            </div>
+            <div class="text-center mb-9">
+                <img class="w-[100%]" src="images/pet.webp" alt="" srcset="">
+            </div>
+            <div>
+                <h1 class="text-[72px] text-[#131313] font-bold">Adopt  Your  Best Friend</h1>
+                <p class="font-bold text-[16px] text-[#131313] ">It is a long established fact that a reader  will be distracted by the readable content of a page when looking at <br> its layout. The point of using Lorem Ipsum is that it has a.</p>
+            </div>
+        </section>
+         <!-- banner section stary here  -->
+
+    </header>
+     <!-- header section end here  -->
+    <!-- main section start here  -->
+    <main>
+    
+        <!-- dynamic button section  -->
+        <section id="buttonContainer" class="grid lg:grid-cols-4 sm:grid-cols-1 sm:gap-5 w-3/4 mx-auto mb-7" >
+            
+        </section>
+        <!-- best deal for you section  -->
+        <section class="flex  justify-between  w-3/4 mx-auto mb-7">
+            <div>
+               <span> <h1 class="text-[24px] font-semibold">Best Deal For you</h1></span>
+            </div>
+            <div>
+                <button onclick="sortingPriceData()" class="btn border-none text-[#fff] mt-5 bg-[#0E7A81]">Short By Price</button> 
+            </div>
+        </section>
+      
+        <!-- show pets section -->
+         <section class="grid lg:grid-cols-4 sm:grid-cols-3 " id="petsSection">
+          
+          <!-- all pets  -->
+          <div class="grid lg:col-span-3 lg:grid-cols-3  sm:col-span-2 sm:grid-cols-3 relative " id="showAllPets">
+            
+            <div class="bg-white  hidden absolute" id="countDownModal">
+         
+            </div>
+            <div class="bg-white hidden absolute" id="modalContainer">
+           
+            </div>
+          
+          </div>
+          <div class="col-span-1 grid-cols-1" id="likedPetsContainer">
+            <h1 class="text-[25px] text-center">Liked Pets</h1>
+          </div>
+          
+           <!-- liked pets  -->
+         
+            <!-- liked pets  -->
+          <!-- all pets  -->
+           <!-- modal pets  --> 
+        <!-- countdownModal  -->
+      
+          
+         </section>
+        <!-- show pets section -->
+
+      
+        
+       
+         
+
+
+    </main>
+      <!-- main section end here  -->
+<!-- footer section  -->
+<footer class="footer bg-gray-400 text-base-content p-10">
+  <nav>
+   <div class="flex flex-row gap-1"> 
+   <div>
+    <img class="mr-3 w-full" src="images/logo.webp" alt="" srcset="">
+   </div>
+    <div class="w-full">
+    <h6 class="footer-title text-[20px]">
+      Peddy
+     </h6>
+   </div>
+  </div>
+   <p>Location: av. Washington 165, NY CA 54003 <br>
+    Phone: +31 85 964 47 25 <br>
+    Email: info@yourdomain.com <br>
+    Openings hours: 9.00 AM - 5.00 PM</p>
+    <a class="link link-hover"></a>
+    <div class="flex gap-2">
+      <span class="w-10"><img src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000" alt=""></span>
+      <span class="w-10" ><img src="https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png&color=000000" alt=""></span>
+      <span class="w-10"><img src="https://img.icons8.com/?size=100&id=19318&format=png&color=000000" alt=""></span>
+      <span class="w-10"><img src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000" alt=""></span>
+    </div>
+   
+  </nav>
+  
+  <nav>
+    <h6 class="footer-title">Useful Links</h6>
+    <a class="link link-hover">Home</a>
+    <a class="link link-hover">About Us</a>
+    <a class="link link-hover">Animals</a>
+    <a class="link link-hover">Foundation</a>
+    <a class="link link-hover">Contact</a>
+  </nav>
+  <form>
+    <h6 class="footer-title">Drop a Message</h6>
+    <fieldset class="form-control w-80">
+      <label class="label">
+        <span class="label-text">Enter your email address</span>
+      </label>
+      <div class="join">
+        <input
+          type="text"
+          placeholder="username@site.com"
+          class="input input-bordered join-item" />
+        <button class="btn btn-primary join-item">Subscribe</button>
+      </div>
+    </fieldset>
+  </form>
+</footer>
+    <!-- JS Files link area  -->
+    <script src="scripts/main.js"></script>
+     <!-- JS Files link area  -->
+</body>
+</html>
